@@ -1,0 +1,276 @@
+/*
+Theme Name: GEPRC Child
+Theme URI: https://geprc.com/
+Description: Thème enfant inspiré de l'identité GEPRC, basé sur Twenty Twenty-Four pour proposer une expérience e-commerce sombre et dynamique.
+Author: OpenAI
+Author URI: https://openai.com/
+Template: twentytwentyfour
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: geprc-child
+*/
+
+:root {
+    --geprc-ink: #0d0f10;
+    --geprc-panel: #14181c;
+    --geprc-contrast: #1e252b;
+    --geprc-accent: #0ec1f4;
+    --geprc-accent-2: #7fffd4;
+    --geprc-text: #e8edf2;
+    --geprc-muted: #9fb3c8;
+    --geprc-radius: 16px;
+    --geprc-gap: 20px;
+    --geprc-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+}
+
+body {
+    background: radial-gradient(circle at 15% 15%, rgba(14, 193, 244, 0.12), transparent 35%),
+        radial-gradient(circle at 80% 10%, rgba(127, 255, 212, 0.2), transparent 35%),
+        linear-gradient(135deg, #0b0d0f 0%, #0f1215 60%, #0a0c0f 100%);
+    color: var(--geprc-text);
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+a {
+    color: var(--geprc-accent);
+}
+
+a:hover,
+a:focus {
+    color: var(--geprc-accent-2);
+}
+
+.site-header {
+    background: rgba(13, 15, 16, 0.92);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.site-header .primary-navigation a {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+}
+
+.geprc-hero {
+    position: relative;
+    padding: clamp(4rem, 10vw, 7rem) 0;
+    overflow: hidden;
+}
+
+.geprc-hero .hero-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    align-items: center;
+    gap: clamp(24px, 6vw, 48px);
+}
+
+.geprc-hero .hero-card {
+    background: linear-gradient(145deg, rgba(20, 24, 28, 0.75), rgba(24, 29, 34, 0.95));
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--geprc-radius);
+    padding: clamp(24px, 5vw, 40px);
+    box-shadow: var(--geprc-shadow);
+}
+
+.geprc-hero .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    color: var(--geprc-accent-2);
+    background: rgba(14, 193, 244, 0.08);
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(14, 193, 244, 0.3);
+}
+
+.geprc-hero h1 {
+    font-size: clamp(2.8rem, 5vw, 3.6rem);
+    margin: 12px 0;
+}
+
+.geprc-hero p {
+    color: var(--geprc-muted);
+    font-size: 1.05rem;
+}
+
+.geprc-hero .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.geprc-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid transparent;
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.geprc-btn.primary {
+    background: linear-gradient(120deg, #0ec1f4 0%, #7fffd4 100%);
+    color: #0a0c0f;
+    box-shadow: 0 10px 30px rgba(14, 193, 244, 0.2);
+}
+
+.geprc-btn.secondary {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--geprc-text);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.geprc-btn:hover,
+.geprc-btn:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 36px rgba(14, 193, 244, 0.25);
+    border-color: rgba(14, 193, 244, 0.3);
+}
+
+.geprc-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.geprc-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--geprc-muted);
+    font-weight: 600;
+}
+
+.geprc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--geprc-gap);
+    margin-top: 32px;
+}
+
+.geprc-card {
+    background: linear-gradient(180deg, rgba(21, 25, 30, 0.9), rgba(12, 14, 17, 0.9));
+    border-radius: var(--geprc-radius);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.geprc-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(14, 193, 244, 0.35);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.geprc-card h3 {
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+.geprc-card p {
+    color: var(--geprc-muted);
+}
+
+.geprc-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: var(--geprc-accent);
+    background: rgba(14, 193, 244, 0.08);
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(14, 193, 244, 0.25);
+}
+
+.geprc-section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.geprc-section-title h2 {
+    margin: 0;
+    font-size: clamp(2rem, 3vw, 2.4rem);
+}
+
+.geprc-section-title .subtitle {
+    color: var(--geprc-muted);
+    max-width: 560px;
+}
+
+.geprc-specs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.geprc-spec {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-weight: 600;
+}
+
+.geprc-footnote {
+    margin-top: 16px;
+    color: var(--geprc-muted);
+    font-size: 0.96rem;
+}
+
+.woocommerce ul.products li.product {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--geprc-radius);
+    padding: 14px;
+    box-shadow: var(--geprc-shadow);
+}
+
+.woocommerce ul.products li.product a {
+    color: var(--geprc-text);
+    text-decoration: none;
+}
+
+.woocommerce ul.products li.product .price {
+    color: var(--geprc-accent);
+    font-weight: 700;
+}
+
+.woocommerce span.onsale {
+    background: var(--geprc-accent);
+    color: #0a0c0f;
+    border-radius: 10px;
+    padding: 8px 12px;
+}
+
+@media (max-width: 782px) {
+    .geprc-section-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .geprc-hero .hero-actions {
+        width: 100%;
+    }
+}
